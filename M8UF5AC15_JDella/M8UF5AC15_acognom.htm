@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Formulari d'enviament</title>
+        <script type="text/javascript">
+            function validar(){
+                var psswd=document.getElementById("psswd").value;
+                var confpsswd=document.getElementById("confpsswd").value;
+                if(psswd==confpsswd){
+                    return true;
+                }
+                else{
+                    alert("No coincideix");
+                    return false;
+                }
+            }
+        </script>
+    </head>
+    <body style="font-family: Verdana, Geneva, Tahoma, sans-serif;">
+        <table align="center" style="background-color:#EFEFEF ;" >
+            <form action="mailto:jorge.della@inslapineda.cat" onsubmit="return validar();">
+            <tr style="background-color: #306090;">
+                <td align="justify" colspan="3">Enviar missatge</td>
+                <td></td>
+                <td><img align="right" src="./img/gb_reload_s.gif" alt="paper" style="width: 30px;height: 30px;"></td>
+            </tr>
+            <tr>
+                <td align="right">Nom: </td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td align="right" required="true">E-Mail:</td>
+                <td><input type="email" ></td>
+            </tr>
+            <tr>
+                <td align="right">Usuari:</td>
+                <td><input type="text" maxlength="8"></td>
+            </tr>
+            <tr>
+                <td align="right">Contrasenya:</td>
+                <td><input type="password" id="psswd"></td>
+            </tr>
+            <tr>
+                <td align="right">Confirmació de la contrasenya:</td>
+                <td><input type="password" id="confpsswd"></td>
+            </tr>
+            <tr>
+                <td align="right">Arxiu: </td>
+                <td><input type="text"></td>
+                <td><input type="file"></td>
+            </tr>
+            <tr>
+                <td align="right">Imatge: </td>
+                <td><input type="text"></td>
+                <td><input type="file"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td align="justify" colspan="2">El tamany de l'arxiu i la imatge no pot excedir els 4KBytes.</td>
+            </tr>
+            <tr>
+                <td align="right">Quins jocs t'interessen?</td>
+                <td colspan="2" required="true"><input type="checkbox">GranTurismo7 <input type="checkbox">Dying Light 2:Stay Human
+                    <input type="checkbox">Battlefield2042 <input type="checkbox">Elden Ring</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td align="center"><strong>Requereixo resposta: <input type="radio" name="si" value="si" checked="true">Si
+                <input type="radio" name="no" value="no">No</strong></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td align="center"><strong>Missatge</strong></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td align="center"><textarea></textarea></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td align="center"><input type="submit"><input type="reset">
+            </tr>
+            </form>
+        </table>
+    </body>
+</html>
